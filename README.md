@@ -87,6 +87,7 @@ git config --global credential.credentialStore plaintext
 >⚠️ You may get duplicate entries for credential.helper and the first entry being empty
 
 Run `git config --global --list` to view config
+
 Run `git config --global --edit` to remove any empty ones, if need be. This one always work best if error exit
 
 Other git commands that were helpful to me for reference sake:
@@ -173,7 +174,7 @@ sudo systemctl status smartfrontend
 ```
 These manual steps can later be automated using **Ansible** or your CI/CD pipeline.
 
-🔁 1️⃣2️⃣ Secure Passwordless `sudo` for CI/CD
+## 🔁 1️⃣2️⃣ Secure Passwordless `sudo` for CI/CD
 
 To allow your GitHub Actions pipeline to restart the service securely without requiring a password, edit the sudoers file:
 ```
