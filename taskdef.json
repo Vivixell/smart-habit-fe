@@ -1,0 +1,23 @@
+{
+  "family": "cicd-app-task",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "executionRoleArn": "arn:aws:iam::122452779326:role/ecsTaskExecutionRole-cicd",
+  "containerDefinitions": [
+    {
+      "name": "cicd-app-container",
+      "image": "<IMAGE1_NAME>",
+      "portMappings": [{ "containerPort": 80, "protocol": "tcp" }],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/cicd-app",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ]
+}
