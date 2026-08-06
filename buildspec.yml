@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    IMAGE_REPO_NAME: "cicd-app"
+    IMAGE_REPO_NAME: "blue-green-app"
 
 phases:
   pre_build:
